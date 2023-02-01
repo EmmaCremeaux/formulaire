@@ -1,0 +1,64 @@
+<!-- OBJECTIFS
+- Comprendre les expressions régulière
+- Savoir ecrire  des expressions régulières  simple
+- Maitriser le comportement du javascript du navigateur
+- Comprendre les différents impact UX, accessibilité et organisation du code
+
+Création d'un formulaire HTML pour la création d'un compte utilisateur.
+OK - Ajout des champs Nom*, prénom *, email*, mot de passe*, confirmation du mot de passe, date de naissance*, CGU*
+- Intégration de bootstrap pour la mise en forme (facultatif)
+- Indiquer les champs obligatoire d'une étoile  rouge
+- Créer le contrôle  de formulaire en vanilla JS. 
+          Chaque champ est controlé lorsque l'utilisateur quitte le champ (évènement  blur) 
+          et lors de la soumission du formulaire
+- Le navigateur ne doit pas executer ses contrôles  de champs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+    <form id="formEmail">
+        <div>
+        <label for="lastName">Nom :</label>
+        <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div>
+        <label for="firstName">Prénom :</label>
+        <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div>
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+        <label for="passwordVerif">Confirmer le mot de passe :</label>
+        <input type="passwordVerif" id="passwordVerif" name="passwordVerif" required>
+        </div>
+        <div>
+        <label for="birthday">Date de naissance :</label>
+        <input type="date" id="birthday" name="birthday" required>
+        </div>
+        <div>
+        <input type="checkbox" id="acceptcgu" name="acceptcgu" required>
+        <label for="acceptcgu">J'accepte les conditions générales d'utilisation</label>
+        </div>
+        <p id="errorMessage"></p>
+        
+        <input type="submit" value="Soumettre">
+      </form>
+
+    
+</body>
+</html>
